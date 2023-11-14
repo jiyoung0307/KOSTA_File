@@ -35,7 +35,7 @@ public class FileUploadController {
             System.out.println(part.getSize());
             System.out.println(part.getContentType());
             System.out.println(part.getSubmittedFileName());
-            part.write(fileDir + part.getSubmittedFileName());
+            part.write(fileDir + part.getSubmittedFileName());  /** images에 null이 생기는 이유 */
         }
         return "FileUploadForm";
     }

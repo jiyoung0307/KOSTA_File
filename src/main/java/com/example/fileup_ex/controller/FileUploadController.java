@@ -27,7 +27,6 @@ public class FileUploadController {
     @PostMapping("/upload")
     public String upload(HttpServletRequest req) throws ServletException, IOException {
         System.out.println(req.getParameter("name"));
-        req.getParameter("name");
         req.getParameter("price");
         req.getParameter("quantity");
         Collection<Part> parts = req.getParts();

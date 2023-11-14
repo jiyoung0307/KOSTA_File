@@ -1,5 +1,7 @@
 package com.example.fileup_ex.controller;
 
+import com.example.fileup_ex.repository.ProductRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -16,13 +18,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
 
-/**
- * 타입리프로 할 경우 Controller 작성
- */
+/** 타입리프로 할 경우 Controller 작성 */
 @Controller
 @RequestMapping("/files")
 @Slf4j
+@RequiredArgsConstructor
 public class FileUploadController {
+    private final ProductRepository productRepository;
+
     @Value("${file.dir}")
     private String fileDir;
 
